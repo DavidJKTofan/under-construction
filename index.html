@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Under Construction - Coming Soon</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Open Graph Protocol -->
+    <meta
+      name="description"
+      content="This website is still under construction. Please come back in the near future."
+    />
+    <meta
+      name="keywords"
+      content="construction, under construction, website, work in progress"
+    />
+    <meta name="author" content="Confidential" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:title" content="Under Construction - Coming Soon" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:url" content="/" /> -->
+    <meta property="og:image" content="assets/thumbnail.png" />
+    <meta
+      property="og:description"
+      content="A description of your website for social media platforms."
+    />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Under Construction - Coming Soon" />
+    <meta
+      name="twitter:description"
+      content="This website is still under construction. Please come back in the near future."
+    />
+    <meta name="twitter:image" content="assets/thumbnail.png" />
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
+    <!-- Style -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>Site Under Construction</h1>
+    </div>
+    <div id="main-content">
+      <p id="description">
+        We're currently working hard to bring you a great new site. Please check
+        back soon!
+      </p>
+    </div>
+    <div id="footer">
+      <p>More info coming soon...</p>
+    </div>
+    <script>
+      function createShape(className, size, color, delay, x, y) {
+        const shape = document.createElement("div");
+        shape.classList.add("shape", className);
+        shape.style.width = `${size}px`;
+        shape.style.height = `${size}px`;
+        shape.style.backgroundColor = color;
+        shape.style.animationDelay = `${delay}s`;
+        shape.style.left = `${x * 100}%`;
+        shape.style.top = `${y * 100}%`;
+        shape.style.setProperty("--x", x);
+        shape.style.setProperty("--y", y);
+        return shape;
+      }
+      const mainContent = document.getElementById("main-content");
+      const shapes = [
+        ["shape-1", 50, "#ff9800", -1],
+        ["shape-2", 30, "#e91e63", -2],
+        ["shape-3", 70, "#2196f3", -3],
+        ["shape-4", 40, "#4caf50", -4],
+        ["shape-5", 20, "#ffc107", -5],
+        ["shape-6", 60, "#9c27b0", -6],
+        ["shape-7", 35, "#00bcd4", -7],
+        ["shape-8", 25, "#8bc34a", -8],
+        ["shape-9", 45, "#673ab7", -9],
+        ["shape-10", 55, "#ff5722", -10],
+      ];
+      for (let i = 0; i < shapes.length; i++) {
+        const [className, size, color, delay] = shapes[i];
+        const x = Math.random();
+        const y = Math.random();
+        const shape = createShape(className, size, color, delay, x, y);
+        mainContent.appendChild(shape);
+      }
+    </script>
+  </body>
+</html>
